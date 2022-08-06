@@ -1,0 +1,35 @@
+.controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 1rem;
+}
+
+.ping-count {
+  padding: 1rem;
+  background-color: #f8f8f8;
+  border-color: #f8f8f8;
+  border-radius: 5px;
+  border-width: 2px;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.ping {
+  animation: ping-animation 0.2s forwards;
+}
+
+@keyframes ping-animation {
+  0% {
+    border-color: #f8f8f8;
+  }
+
+  99% {
+    border-color: #FE4081;
+  }
+
+  100% {
+    border-color: #f8f8f8;
+  }
+}

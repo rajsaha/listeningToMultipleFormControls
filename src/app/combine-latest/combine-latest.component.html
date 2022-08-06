@@ -1,0 +1,19 @@
+<div *ngIf="form" [formGroup]="form" class="controls">
+  <mat-form-field appearance="outline">
+    <mat-label>Field 1</mat-label>
+    <mat-select formControlName="field1">
+      <mat-option *ngFor="let value of field1Values" [value]="value">{{ value }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Field 2</mat-label>
+    <mat-select formControlName="field2">
+      <mat-option *ngFor="let value of field2Values" [value]="value">{{ value }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>
+
+<div class="ping-count" [ngClass]="{ 'ping': !!isAnimating }">
+  <p><code>valueChanges</code> hit count: {{ pingCount }}</p>
+</div>
